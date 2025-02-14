@@ -3,9 +3,12 @@ import { ConfigService } from './services/config.service';
 import { StripeService } from './services/stripe.service';
 import { NestjsCashierModuleAsyncOptions, NestjsCashierModuleOptions } from './interfaces';
 import {
+    AccountLinkService,
+    AccountService,
     CustomerService,
     PriceService,
     ProductService,
+    SetupIntentService,
     SubscriptionService
 } from './services/stripe';
 
@@ -28,6 +31,9 @@ export class NestjsCashierModule {
                 PriceService,
                 ProductService,
                 SubscriptionService,
+                SetupIntentService,
+                AccountService,
+                AccountLinkService,
                 StripeService,
             ],
             exports: [StripeService],
